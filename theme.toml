@@ -1,0 +1,15 @@
+name = "Hugo Minimal Test Theme"
+license = "MIT"
+licenselink = "https://github.com/danielfdickinson/hugo-minimal-test/blob/master/LICENSE"
+description = "A minimal theme to generate reproducible test cases for Hugo and Hugo-based sites."
+homepage = "http://hugo-minimal-test.wildtechgarden.ca/"
+tags = ["test","minimal","light","minimalist","fast","demo","debug","debug tool"]
+features = ["light","fast","debug tables","debugging tool","minimum test case","minimum reproducible test cases","debug"]
+min_version = "0.81.0"
+extended = false
+summaryLength = "60"
+
+[author]
+  name = "Daniel F. Dickinson"
+  homepage = "https://www.danielfdickinson.ca/"
+  copyright = "© 2021 Daniel F. Dickinson"

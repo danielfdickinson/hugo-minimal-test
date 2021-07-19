@@ -1,0 +1,10 @@
+<head>
+    <meta charset="utf-8">
+    <title>{{- partial "return-helpers/title" . -}}</title>
+    {{- if eq (.Param "testStylesInclude") true -}}
+    {{ partial "helpers/debug-tables/debug-head-snippet" . }}
+    <link rel="stylesheet" href="/css/hugo-test-minimal-old.css" />
+    {{- end -}}
+    {{ hugo.Generator }}
+    {{ if ne (.Param "useBaseUrl") false -}}{{ if $.Site.BaseURL -}}<base href="{{ $.Site.BaseURL }}" />{{- end }}{{- end }}
+</head>

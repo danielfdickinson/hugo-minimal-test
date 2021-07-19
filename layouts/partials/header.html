@@ -1,0 +1,27 @@
+{{- $curPage := . -}}
+{{- if ne (.Param "showTopBarMenu") false }}
+<header class="header-test-min">
+    <nav aria-label="Main Site Menu"
+    class="bar-test-min menubar-test-min test-mainmenu-min">
+        <ul class="list-test-min"><li class="list-item-test-min{{- if eq $curPage site.Home }} current-menu-is-test-min{{- end -}}">
+                <span class="link-wrapper-test-min"><a
+                class="link-test-min" href="{{- site.Home.RelPermalink -}}">{{-
+                partial "return-helpers/title" site.Home -}}</a></span>
+            </li>
+        {{- $mainMenu := site.Menus.main -}}
+        {{- $sections := where site.Home.Pages "Section" "in" site.Params.mainSections -}}
+        {{- $menuPages := (slice) -}}
+        {{- range $mainMenu -}}
+            {{- $menuPages = $menuPages | append (where site.Home.Pages "RelPermalink" .URL) -}}
+        {{- end -}}
+        {{- range (union $sections $menuPages).ByWeight.ByDate -}}
+            <li class="list-item-test-min{{- if eq $curPage . }} current-menu-is-test-min{{- end -}}">
+                <span class="link-wrapper-test-min"><a
+                href="{{- .RelPermalink -}}" class="link-test-min">{{-
+                partial "return-helpers/title" . -}}</a></span>
+            </li>
+        {{- end -}}
+        </ul>
+    </nav>
+{{- end }}
+</header>
