@@ -182,7 +182,7 @@ In ``config.toml`` add
 ```
 ### For the Debug Tables
 
-See [hugo-debug-tables README.md](https://github.com/danielfdickinson/hugo-debug-tables/blog/main/README.md)
+See [hugo-debug-tables README.md](https://github.com/danielfdickinson/hugo-debug-tables/blob/main/README.md)
 
 ### For the theme itself
 
