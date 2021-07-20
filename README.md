@@ -69,7 +69,7 @@ add ``{{\< hello-world>}}`` to a **content** file (not template).
 ### Using Hugo Modules (preferred)
 
 1. Initialize the Hugo module system: ``hugo mod init github.com/<your_user>/<your_project>`` (assuming you are using github, of course).
-2. Import the theme in your ``config.html``
+2. Import the theme in your ``config.toml``
    ```
    [module]
      [[module.imports]]
@@ -121,7 +121,7 @@ add ``{{\< hello-world>}}`` to a **content** file (not template).
 
 ## Change Debug Table from Development Only
 
-See full [hugoDebugTable README.md](https://github.com/danielfdickinson/hugo-debug-tables/blob/main/README.md)
+See full [hugo-debug-table README.md](https://github.com/danielfdickinson/hugo-debug-tables/blob/main/README.md)
 for information on using the debug table included in this theme.
 
 ### To add to production builds
