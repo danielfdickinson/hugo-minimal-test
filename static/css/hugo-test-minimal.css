@@ -1,0 +1,111 @@
+
+@media screen {
+    * {
+        box-sizing: border-box;
+    }
+}
+
+@media not speech {
+    body {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 28em) {
+    body {
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width: 36em) {
+    body {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 48em) {
+    body {
+        font-size: 19px;
+    }
+}
+
+@media screen and (min-width: 56em) {
+    body {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    body {
+        font-size: 21px;
+    }
+}
+
+.main-test-min table:not(.table-debug-hugo) {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.main-test-min table:not(.table-debug-hugo) tr th {
+    background-color: lightgray;
+    border-bottom: 4px ridge;
+    border-left: 4px ridge;
+    border-top: 4px ridge;
+    text-align: left;
+    width: max-content;
+}
+
+@supports (text-align: start) {
+    .main-test-min table:not(.table-debug-hugo) tr th {
+        text-align: start;
+    }
+}
+
+.main-test-min table:not(.table-debug-hugo) tr th:last-of-type {
+    border-right: 4px ridge;
+}
+
+.main-test-min table:not(.table-debug-hugo) tr td {
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+    width: max-content;
+}
+
+.main-test-min table:not(.table-debug-hugo) tr td:last-of-type {
+    border-right: 2px solid;
+    min-width: 45vw;
+}
+
+.main-test-min table:not(.table-debug-hugo) tbody tr:nth-of-type(even) {
+    background-color: #eee;
+}
+
+.main-test-min .highlight {
+    min-width: max-content;
+    overflow: visible;
+}
+
+.main-test-min pre {
+    background-color: lightgray;
+    min-width: max-content;
+    overflow: visible;
+    padding: .4em;
+}
+
+.main-test-min .highlight > pre {
+    background-color: initial;
+    min-width: max-content;
+    overflow: visible;
+}
+
+.main-test-min pre > code {
+    min-width: max-content;
+    overflow: visible;
+}
+
+.main-test-min .highlight > pre > code {
+    margin: 0;
+    min-width: max-content;
+    overflow: visible;
+    padding: 0;
+}

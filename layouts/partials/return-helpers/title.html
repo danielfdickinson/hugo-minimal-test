@@ -1,15 +1,35 @@
-{{- $foundTitle := "Untitled" -}}
-{{- if .Title -}}
-  {{- $foundTitle = .Title -}}
-{{- else if eq .Kind "home" -}}
-    {{- if .Site.Title -}}
-        {{- $foundTitle = .Site.Title -}}
-    {{- else -}}
-        {{- $foundTitle = "Untitled Site" -}}
+{{- $ctx := . -}}
+{{- $concatSiteTitle := false -}}
+{{- if reflect.IsMap $ctx -}}
+    {{- if isset $ctx "concatSiteTitle" -}}
+        {{- if $ctx.concatSiteTitle -}}
+            {{- $concatSiteTitle = true -}}
+            {{- $ctx = $ctx.curPage -}}
+        {{- end -}}
     {{- end -}}
-{{- else if .File -}}
-    {{- if .File.TranslationBaseName -}}
-        {{ $foundTitle = .File.TranslationBaseName | humanize | title -}}
+{{- end -}}
+{{- $foundTitle := "Untitled" -}}
+{{- $siteTitle := "Untitled Site" -}}
+{{- with $ctx -}}
+    {{- if .Site.Title }}
+        {{- $siteTitle = .Site.Title -}}
+    {{- end -}}
+    {{- if eq .Kind "home" -}}
+        {{- $concatSiteTitle = false -}}
+    {{- end -}}
+    {{- if .Title -}}
+        {{- $foundTitle = .Title -}}
+    {{- else if eq .Kind "home" -}}
+        {{- $foundTitle = $siteTitle -}}
+    {{- else if .File -}}
+        {{- if .File.TranslationBaseName -}}
+            {{ $foundTitle = .File.TranslationBaseName | humanize | title -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+{{- if $concatSiteTitle -}}
+    {{- if or (lt (len $foundTitle) 15) (lt (add (len $foundTitle) (len $siteTitle)) 67) -}}
+      {{- $foundTitle = printf "%s | %s" $foundTitle $siteTitle -}}
     {{- end -}}
 {{- end -}}
 {{- return $foundTitle -}}
