@@ -23,6 +23,7 @@
         ],
         "require-sri": "off",
         "void-style": "off",
-        "no-trailing-whitespace": "off"
+        "no-trailing-whitespace": "off",
+        "prefer-tbody": "off"
     }
 }
