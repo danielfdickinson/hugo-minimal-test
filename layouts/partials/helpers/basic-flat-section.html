@@ -1,6 +1,6 @@
 <ul class="section-list-test-min">
 {{ if .Content }}
-    {{ partial "helpers/basic-content" . }}
+    {{ partial "helpers/basic-content" .Content }}
 {{ end }}
 {{ if .Data.Terms }}
     {{/* For taxonomy and term pages, show the count beside the taxonomy or term, avoids need for specific taxonomy/term layouts  */}}
