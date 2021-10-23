@@ -2,11 +2,11 @@
 
 ## Status
 
-TBD
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a694f1df-362c-4c21-87b1-828d93bd5e1b/deploy-status)](https://app.netlify.com/sites/hugo-minimal-test/deploys)
 
 ## Demo Site
 
-TBD
+<https://hugo-minimal-test.wildtechgarden.ca>
 
 ## Overview
 
