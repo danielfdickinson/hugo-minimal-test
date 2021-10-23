@@ -1,7 +1,7 @@
 {{ define "main" }}
 <h2>Custom Layout for Section (layout-order layout)</h2>
     {{ if .Content }}
-        {{ partial "helpers/basic-content" . }}
+        {{ partial "helpers/basic-content" .Content }}
     {{ end }}
     <hr>
     {{ if .Pages }}
