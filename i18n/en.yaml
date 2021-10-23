@@ -1,0 +1,45 @@
+---
+- id: browser_too_old
+  translation: Your browser lacks features required by this site (such browsers include Internet Explorer 11).
+
+- id: untitled
+  translation: Untitled
+
+- id: untitled_site
+  translation: Untitled Site
+
+- id: powered_by
+  translation: Powered By
+
+- id: dfd_demo_site_theme
+  translation: DFD Demo Site Theme
+
+- id: older
+  translation: Older
+
+- id: older_this_section
+  translation: Older (this section)
+
+- id: newer
+  translation: Newer
+
+- id: newer_this_section
+  translation: Newer (this section)
+
+- id: up_a_level
+  translation: Up a Level
+
+- id: at_top
+  translation: At Top
+
+- id: site
+  translation: Site
+
+- id: taxonomies
+  translation: Taxonomies
+
+- id: main_site_menu
+  translation: Main Site Menu
+
+- id: site_page_navigation
+  translation: Site Page Navigation

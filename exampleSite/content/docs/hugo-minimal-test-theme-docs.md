@@ -1,14 +1,4 @@
-# Hugo Minimal Test Theme Component
-
-## Status
-
-TBD
-
-## Demo Site
-
-TBD
-
-## Overview
+# Hugo Minimal Test Theme
 
 This theme is not intended to be used as a normal theme. It is intended as a framework for creating minimal reproducible test cases. As such, one does not simply drop it in a site, but rather creates a repository specifically designed to isolate and demonstrate the issue one is facing.
 
@@ -71,14 +61,12 @@ A simple shortcode that emits an HTML paragraph with 'Hello World!'. To use it,
 add ``{{\< hello-world>}}`` to a **content** file (not template).
 ## Usage
 
-### From Scratch
-
 1. Create a test case site, or clone a site with no additional layouts, and switch to it
    ```
-   git clone https://github.com/danielfdickinson/hugo-minimal-test
-   cd hugo-minimal-test/exampleSite
+   git clone https://github.com/danielfdickinson/hugo-test-minimal-theme
+   cd hugo-test-minimal-theme
    ```
-### Theme, Adding This Hugo Module (preferred)
+### Using Hugo Modules (preferred)
 
 1. Initialize the Hugo module system: ``hugo mod init github.com/<your_user>/<your_project>`` (assuming you are using github, of course).
 2. Import the theme in your ``config.toml``
@@ -96,7 +84,7 @@ add ``{{\< hello-world>}}`` to a **content** file (not template).
    ```
    hugo server -b http://localhost:1313/
    ```
-### Using downloaded copy of the theme  component (e.g. Zip from the Git repo)
+### Using downloaded copy of the theme (e.g. Zip from the Git repo)
 
 1. Make a themes directory and switch to it
    ```

@@ -109,3 +109,7 @@
     overflow: visible;
     padding: 0;
 }
+
+.nav-site-page-test-min .list-item-label-test-min {
+    padding-right: .4em;
+}

@@ -1,5 +1,5 @@
 module github.com/danielfdickinson/hugo-minimal-test
 
-go 1.16
+go 1.17
 
-require github.com/danielfdickinson/hugo-debug-tables v0.0.0-20210718172730-4017bd28fc0c // indirect
+require github.com/danielfdickinson/hugo-debug-tables v0.0.0-20211023043659-a7118a493139 // indirect
