@@ -1,25 +1,29 @@
-<nav aria-label="Site Page Navigation" class="nav-site-page-test-min bar-test-min">
+{{ if ne (.Param "hideSitePageNavigation") true -}}
+{{- /* Show page navigation bar: Older | Older (this section) | Up a Level (or At Top) | Newer (this section) | Newer */ -}}
+{{- /* Navigation labels may be hidden via CSS so that only the CSS and symbols appear (to save screen real estate) */ -}}
+<nav aria-label="{{ i18n "site_page_navigation" }}" class="nav-site-page-test-min bar-test-min">
     <ul class="list-test-min bar-test-min linkbar-test-min">
         <li class="list-item-test-min{{- if not .Prev }} none-test-min{{- end -}}">{{ if .Prev }}<a class="link-test-min"
-        href="{{ .Prev.RelPermalink }}"><span class="list-item-label-test-min">Older: </span>{{
+        href="{{ .Prev.RelPermalink }}"><span class="list-item-label-test-min">{{ i18n "older" }}: </span>{{
         partial "return-helpers/title" .Prev }}</a>{{ else
-        }}<span class="link-test-min"><span class="list-item-label-test-min">Older: </span>&squarf;</span>{{ end }}</li>
+        }}<span class="link-test-min"><span class="list-item-label-test-min">{{ i18n "older" }}: </span>&squarf;</span>{{ end }}</li>
         <li class="list-item-test-min{{- if not .PrevInSection }} none-test-min{{- end -}}">{{ if .PrevInSection
             }}<a class="link-test-min" href="{{ .PrevInSection.RelPermalink }}"><span
-            class="list-item-label-test-min">Older (this section): </span>{{
+            class="list-item-label-test-min">{{i18n "older_this_section"}}: </span>{{
             partial "return-helpers/title" .PrevInSection }}</a>{{ else
-            }}<span class="link-test-min" ><span class="list-item-label-test-min">Older (this section): </span>&squarf;</span>{{ end }}</li>
+            }}<span class="link-test-min"><span class="list-item-label-test-min">{{i18n "older_this_section"}}: </span>&squarf;</span>{{ end }}</li>
         <li class="list-item-test-min{{- if not .Parent }} none-test-min{{- end -}}">{{ if .Parent }}<a class="link-test-min"
-            href="{{ .Parent.RelPermalink }}"><span class="list-item-label-test-min">Up a level: </span>{{ partial
+            href="{{ .Parent.RelPermalink }}"><span class="list-item-label-test-min">{{ i18n "up_a_level" }}</span>{{ partial
             "return-helpers/title" .Parent}}</a>{{
-            else }}<span class="link-test-min"><span class="list-item-label-test-min">At Top</span>: &squarf;</span>{{ end }}</li>
+            else }}<span class="link-test-min"><span class="list-item-label-test-min">{{ i18n "at_top" }}</span>&equiv;</span>{{ end }}</li>
         <li class="list-item-test-min{{- if not .NextInSection }} none-test-min{{- end -}}">{{ if .NextInSection
         }}<a class="link-test-min" href="{{ .NextInSection.RelPermalink }}"><span
-            class="list-item-label-test-min">Newer (this section): </span>{{ partial "return-helpers/title" .NextInSection }}</a>
-            {{ else }}<span class="link-test-min"><span class="list-item-label-test-min">Newer (this section): </span>&squarf;</span>{{ end }}</li>
+            class="list-item-label-test-min">{{ i18n "newer_this_section" }}: </span>{{ partial "return-helpers/title" .NextInSection }}</a>
+            {{ else }}<span class="link-test-min"><span class="list-item-label-test-min">{{ i18n "newer_this_section" }}: </span>&squarf;</span>{{ end }}</li>
         <li class="list-item-test-min{{- if not .Next }} none-test-min{{- end -}}">{{ if .Next }}<a
             class="link-test-min" href="{{ .Next.RelPermalink }}"><span
-        class="list-item-label-test-min">Newer: </span>{{ partial "return-helpers/title" .Next }}</a>{{ else
-        }}<span class="link-test-min"><span class="list-item-label-test-min">Newer: </span>&squarf;</span>{{ end }}</li>
+        class="list-item-label-test-min">{{ i18n "newer" }}: </span>{{ partial "return-helpers/title" .Next }}</a>{{ else
+        }}<span class="link-test-min"><span class="list-item-label-test-min">{{ i18n "newer" }}: </span>&squarf;</span>{{ end }}</li>
     </ul>
 </nav>
+{{- end }}

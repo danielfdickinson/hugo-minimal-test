@@ -1,5 +1,5 @@
-name = "Hugo Minimal Test Theme"
-description = "Modules for Hugo Minimal Test Theme"
+name = "Hugo Minimal Test"
+description = "Module for Hugo Minimal Test Theme Component"
 
 [module]
   [module.hugoVersion]
