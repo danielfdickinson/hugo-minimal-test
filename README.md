@@ -104,7 +104,7 @@ add ``{{\< hello-world>}}`` to a **content** file (not template).
    cd themes
    ```
 
-2. Obtain a copy of the theme e.g. ([a theme Zip file from the Git repo](https://github.com/danielfdickinson/hugo-minimal-test/archive/refs/head/main.zip))
+2. Obtain a copy of the theme e.g. ([a theme Zip file from the Git repo](https://github.com/danielfdickinson/hugo-minimal-test/archive/refs/heads/main.zip))
 3. Copy/extract the theme into hugo-minimal-test in the themes directory
 4. Change back to the site directory
 5. To test the result, run the local Hugo server
