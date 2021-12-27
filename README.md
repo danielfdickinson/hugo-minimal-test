@@ -2,11 +2,9 @@
 
 ## Status
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a694f1df-362c-4c21-87b1-828d93bd5e1b/deploy-status)](https://app.netlify.com/sites/hugo-minimal-test/deploys)
+ARCHIVED: This repository is archived and has been renamed and moved to <https://github.com/danielfdickinson/minimal-test-theme-hugo-dfd>.
 
-## Demo Site
-
-<https://hugo-minimal-test.wildtechgarden.ca>
+It remains here for the benefit of other repos that depend on it.
 
 ## Overview
 
